@@ -4,24 +4,34 @@ Spring boot application to calculate ticket scanning error rate based on rules a
 The application shall process only the text file with extension .txt and in below data format
 
 class: 1-3 or 5-7
+
 row: 6-11 or 33-44
+
 seat: 13-40 or 45-50
 
+
 your ticket:
+
 7,1,14
 
+
 nearby tickets:
+
 7,3
+
 40,47,4,50
+
 55,2,20
+
 38,6,12
 
+
 here, 
-	Line number 6 represents file’s first line and first section(rules). This section shall contain text with minimum 4 integers to represent two ranges of integers. Following same format as in above example is preferred.
-	After first section empty line as in Line number 9 is expected.
-	Second section (your ticket section) starts from line number 10. Character ':' is expected to identify it. In the next line your ticket values shall be presented as comma separated integers.
-	After second section empty line as in line number 12 is expected.
-	Third section (nearby tickets section) starts from line number 13. Character ':' is expected to identify it. From the next line nearby tickets value shall be presented. Each line of coma separated integers shall represent a nearby ticket value.
+•	First section(rules section) starts from first line of file . This section shall contain text with minimum 4 integers to represent two ranges of integers. Following same format as in above example is preferred.
+•	After first section empty line is expected.
+•	Second section (your ticket section) starts from next line, text  "your ticket:" shall be present in this line. In the next line your ticket values shall be presented as comma separated integers.
+•	After second section empty line is expected.
+•	Third section (nearby tickets section) starts from next line, text "nearby tickets:" shall be present in this line . From the next line nearby tickets value shall be presented. Each line of coma separated integers shall represent a nearby ticket value.
  
  To test in Postman,
  Endpoint URL
